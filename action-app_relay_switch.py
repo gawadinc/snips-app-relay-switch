@@ -72,9 +72,9 @@ class RelaySwitch(object):
             print "[Return] Site Id unmatch"
             return
 
-        if intent_message.intent.intent_name == 'relayTurnOn':
+        if intent_message.intent.intent_name == 'turnOnLeftSignal':
             self.turnOnRelay(hermes, intent_message)
-        if intent_message.intent.intent_name == 'relayTurnOff':
+        if intent_message.intent.intent_name == 'turnOffLeftSignal':
             self.turnOffRelay(hermes, intent_message)
 
     def start_blocking(self):
