@@ -64,11 +64,11 @@ class RelaySwitch(object):
 
     def turnOffRelay(self, hermes, intent_message):
         print '[Received] intent: {}'.format(intent_message.intent.intent_name)
-		if len(intent_message.slots.state) > 0:
+		#if len(intent_message.slots.state) > 0:
 			state = intentMessage.slots.state.first().value # We extract the value from the slot "house_room"
 			result_sentence = "Turning on lights in : {}".format(str(state))  # The response that will be said out loud by the TTS engine.
-		else:
-			result_sentence = 	"Turning on lights" 
+		#else:
+		#	result_sentence = 	"Turning on lights" 
 
         GPIO.output(self.relay_pin, self.relay_off)
         hermes.publish_end_session(intent_message.session_id, result_sentence)
