@@ -80,7 +80,7 @@ class RelaySwitch(object):
 
         if intent_message.intent.intent_name == 'turnOnLeftSignal':
             self.turnOnRelay(hermes, intent_message)
-        if intent_message.intent.intent_name == 'turnOffLeftSignal':
+        if intent_message.intent.intent_name == 'gawadinc:turnOffLeftSignal':
             self.turnOffRelay(hermes, intent_message)
 
     def start_blocking(self):
